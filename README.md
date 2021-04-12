@@ -1,19 +1,19 @@
 # CACHEDIR.TAG for Python
 
 This library handles [CACHEDIR.TAG](https://bford.info/cachedir/) files.
-Allowing arbitrary directories to be marked as a cache directory.
+Allowing any arbitrary directory to be marked as a cache directory.
 
-A CACHEDIR.TAG file indicate directories that contain cached data, e.g.
+A CACHEDIR.TAG file indicates a directory that contain cached data, e.g.
 
 - downloads
 - previews, and thumbnails
 - build artefacts, and other intermediate results
 
+Cached data is useful, but not essential - if necessary it can be regenerated,
+or downloaded again. However backup programs, disk cleanup utilities, & other
+software can't know if an arbitrary path is cached data, unless it is marked.
 
-Cached data is useful, but not essential - if deleted it can be regenerated,
-or downloaded again. However sofware such as backup programs, or disk cleanup utilities can't know if an arbitrary path is cached data, unless it is marked.
-
-A directory (and all directories within it) can be flagged as a cache by
+A directory (and all directories within it) can be marked as a cache by
 writing a regular file named CACHEDIR.TAG, with the first 43 bytes being
 
 ```
