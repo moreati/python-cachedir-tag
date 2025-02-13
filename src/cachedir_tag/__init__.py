@@ -1,6 +1,8 @@
 import errno
 import pathlib
 
+from typing import AnyStr, Optional, NoReturn, Union
+
 
 __all__ = [
     'CACHEDIR_TAG_FILENAME',
@@ -20,6 +22,7 @@ CACHEDIR_TAG_TEMPLATE = '''
 
 
 def tag(directory, application=None, template=CACHEDIR_TAG_TEMPLATE):
+    # type: (Union[AnyStr, pathlib.Path], Optional[str], Optional[str]) -> NoReturn
     '''Indicate that `directory` contains cache data, by creating a
     CACHEDIR.TAG file.
     '''
@@ -31,6 +34,7 @@ def tag(directory, application=None, template=CACHEDIR_TAG_TEMPLATE):
 
 
 def is_tagged(directory):
+    # type: (Union[AnyStr, pathlib.Path]) -> bool
     '''Return True if `directory` is tagged as a cache directory, or False
     otherwise.
     '''
@@ -41,6 +45,7 @@ def is_tagged(directory):
 
 
 def contains_tag(directory):
+    # type: (Union[AnyStr, pathlib.Path]) -> bool
     '''Return True if `directory` contains a valid CACHEDIR.TAG file,
     or False otherwise.
     '''
