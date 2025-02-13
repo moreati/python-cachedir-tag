@@ -56,7 +56,7 @@ def contains_tag(directory):
         with path.open('r', encoding='ascii') as f:
             signature = f.read(len(CACHEDIR_TAG_SIGNATURE))
     except IOError as e:
-        if e.errno == e.ENOENT:
+        if e.errno == errno.ENOENT:
             return False
         raise
 
