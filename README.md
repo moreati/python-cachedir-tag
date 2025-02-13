@@ -66,6 +66,10 @@ Check whether a sub-directory (which may not exist yet) is tagged
 True
 ```
 
+## License
+
+MIT
+
 ## Alternatives
 
 Operating systems and similar platforms usually have conventions about where
