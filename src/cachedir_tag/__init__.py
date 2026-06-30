@@ -25,7 +25,7 @@ def tag(directory, application=None, template=CACHEDIR_TAG_TEMPLATE):
     '''
     suffix = template.format(application=application) if application else '\n'
     path = pathlib.Path(directory) / CACHEDIR_TAG_FILENAME
-    with path.open('w', encoding='ascii') as f:
+    with path.open('w', encoding='utf-8') as f:
         f.write(CACHEDIR_TAG_SIGNATURE)
         f.write(suffix)
 
