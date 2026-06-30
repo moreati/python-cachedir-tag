@@ -60,6 +60,8 @@ def contains_tag(directory):
         if e.errno == errno.ENOENT:
             return False
         raise
+    except UnicodeDecodeError:
+        return False
 
     return signature == CACHEDIR_TAG_SIGNATURE
 

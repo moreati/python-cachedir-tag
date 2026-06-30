@@ -30,6 +30,11 @@ def test_file_truncated(tmp_path: pathlib.Path):
     assert cachedir_tag.is_tagged(tmp_path / 'subdir') == False
 
 
+def test_file_nonascii(tmp_path: pathlib.Path):
+    (tmp_path / 'CACHEDIR.TAG').write_text(u'☃')
+    assert cachedir_tag.is_tagged(tmp_path / 'subdir') == False
+
+
 def test_absent(tmp_path: pathlib.Path):
     assert cachedir_tag.is_tagged(tmp_path / 'subdir') == False
 
