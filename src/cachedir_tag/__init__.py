@@ -31,8 +31,9 @@ def tag(directory, application=None, template=CACHEDIR_TAG_TEMPLATE):
 
 
 def is_tagged(directory):
-    '''Return True if `directory` is tagged as a cache directory, or False
-    otherwise.
+    '''
+    Return True if `directory` or a parent contains a valid CACHEDIR.TAG file,
+    or False otherwise.
     '''
     if contains_tag(directory):
         return True
