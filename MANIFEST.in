@@ -1,2 +1,4 @@
 include *.md
 include pyproject.toml
+include tests/requirements*.txt
+include tox.ini
