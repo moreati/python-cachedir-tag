@@ -60,5 +60,5 @@ def contains_tag(directory):
             return False
         raise
 
-    return True
+    return signature == CACHEDIR_TAG_SIGNATURE
 
