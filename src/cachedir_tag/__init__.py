@@ -5,7 +5,7 @@ import pathlib
 __all__ = [
     'CACHEDIR_TAG_FILENAME',
     'CACHEDIR_TAG_SIGNATURE',
-    'contains_tag'
+    'contains_tag',
     'is_tagged',
     'tag',
 ]
